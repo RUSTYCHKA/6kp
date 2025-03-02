@@ -1,0 +1,2 @@
+BOT_TOKEN = ''
+PASSWORD = '123'

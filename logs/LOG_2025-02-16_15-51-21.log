@@ -1,0 +1,16 @@
+2025-02-16 15:51:21 - INFO - Start polling
+2025-02-16 15:51:22 - INFO - Run polling for bot @etstweryhjierh_bot id=6864118288 - 'testetstetestasdasd'
+2025-02-16 15:51:28 - INFO - Update id=93923407 is handled. Duration 250 ms by bot id=6864118288
+2025-02-16 15:51:29 - INFO - Update id=93923408 is handled. Duration 140 ms by bot id=6864118288
+2025-02-16 15:51:32 - INFO - Update id=93923409 is handled. Duration 406 ms by bot id=6864118288
+2025-02-16 15:51:34 - INFO - Update id=93923410 is handled. Duration 93 ms by bot id=6864118288
+2025-02-16 15:51:36 - INFO - ====== WebDriver manager ======
+2025-02-16 15:51:38 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-16 15:51:38 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-16 15:51:39 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-16 15:51:39 - INFO - WebDriver version 132.0.6834.159 selected
+2025-02-16 15:51:39 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-02-16 15:51:39 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win32/chromedriver-win32.zip
+2025-02-16 15:51:39 - INFO - Driver downloading response is 200
+2025-02-16 15:51:41 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-16 15:51:42 - INFO - Driver has been saved in cache [C:\Users\RUSTYCHKA\.wdm\drivers\chromedriver\win64\132.0.6834.159]

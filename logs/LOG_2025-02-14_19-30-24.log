@@ -1,0 +1,11 @@
+2025-02-14 19:30:25 - INFO - Start polling
+2025-02-14 19:30:25 - INFO - Run polling for bot @etstweryhjierh_bot id=6864118288 - 'testetstetestasdasd'
+2025-02-14 19:30:40 - INFO - Update id=93923352 is handled. Duration 375 ms by bot id=6864118288
+2025-02-14 19:30:41 - INFO - Update id=93923353 is handled. Duration 93 ms by bot id=6864118288
+2025-02-14 19:30:44 - INFO - Update id=93923354 is handled. Duration 155 ms by bot id=6864118288
+2025-02-14 19:30:46 - INFO - Update id=93923355 is handled. Duration 109 ms by bot id=6864118288
+2025-02-14 19:30:47 - INFO - ====== WebDriver manager ======
+2025-02-14 19:30:49 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-14 19:30:49 - INFO - Get LATEST chromedriver version for google-chrome
+2025-02-14 19:30:49 - INFO - Driver [C:\Users\RUSTYCHKA\.wdm\drivers\chromedriver\win64\132.0.6834.159\chromedriver-win32/chromedriver.exe] found in cache
+2025-02-14 19:31:34 - INFO - Update id=93923356 is handled. Duration 46594 ms by bot id=6864118288

@@ -1,0 +1,223 @@
+2025-02-16 17:32:32 - INFO - Start polling
+2025-02-16 17:32:32 - INFO - Run polling for bot @etstweryhjierh_bot id=6864118288 - 'testetstetestasdasd'
+2025-02-16 17:32:38 - INFO - Update id=93923470 is handled. Duration 264 ms by bot id=6864118288
+2025-02-16 17:32:41 - INFO - Update id=93923471 is not handled. Duration 2453 ms by bot id=6864118288
+2025-02-16 17:32:41 - ERROR - Cause exception while process update id=93923471 by bot id=6864118288
+TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client_reqrep.py", line 658, in write_bytes
+    await self.body.write(writer)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\multipart.py", line 1008, in write
+    await part.write(writer)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\payload.py", line 494, in write
+    chunk = await self._iter.__anext__()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\types\input_file.py", line 103, in read
+    async with aiofiles.open(self.path, "rb") as f:
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\base.py", line 63, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\base.py", line 59, in __await__
+    self._obj = yield from self._coro.__await__()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\threadpool\__init__.py", line 92, in _open
+    f = await loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RUSTYCHKA\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'tasks/1083664346/2025-02-16_16-42-31.xlsx.xlsx'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client.py", line 730, in _request
+    await resp.start(conn)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\streams.py", line 672, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\RUSTYCHKA\Desktop\6kproject\handlers\start.py", line 45, in query_completed_task
+    await msg.answer_document(FSInputFile(dir), caption="Результаты")
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+2025-02-16 17:32:48 - INFO - Update id=93923472 is handled. Duration 250 ms by bot id=6864118288
+2025-02-16 17:33:13 - INFO - Update id=93923473 is not handled. Duration 24281 ms by bot id=6864118288
+2025-02-16 17:33:13 - ERROR - Cause exception while process update id=93923473 by bot id=6864118288
+TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client_reqrep.py", line 658, in write_bytes
+    await self.body.write(writer)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\multipart.py", line 1008, in write
+    await part.write(writer)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\payload.py", line 494, in write
+    chunk = await self._iter.__anext__()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\types\input_file.py", line 103, in read
+    async with aiofiles.open(self.path, "rb") as f:
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\base.py", line 63, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\base.py", line 59, in __await__
+    self._obj = yield from self._coro.__await__()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiofiles\threadpool\__init__.py", line 92, in _open
+    f = await loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RUSTYCHKA\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'tasks/1083664346/2025-02-16_16-42-31.xlsx'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client.py", line 730, in _request
+    await resp.start(conn)
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiohttp\streams.py", line 672, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\RUSTYCHKA\Desktop\6kproject\handlers\start.py", line 45, in query_completed_task
+    await msg.answer_document(FSInputFile(dir), caption="Результаты")
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\RUSTYCHKA\Desktop\6kproject\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot6864118288:AAGh9xYUVt6a3RUeEQKzysr6VmNyMMFNmYE/sendDocument
+2025-02-16 17:33:29 - INFO - Update id=93923474 is handled. Duration 452 ms by bot id=6864118288
